@@ -5,4 +5,5 @@ pari-mutuel betting game
 
 1. npm i (node version 18)
 2. Add env variables which are there in .env.example file
-3. npm run start 
+3. mongodb connection is required to run the code on local. 
+4. npm run start 
