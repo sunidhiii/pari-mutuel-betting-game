@@ -1,5 +1,5 @@
-# pari-mutuel-betting-game
-pari-mutuel betting game 
+# Pari-mutuel-betting-game
+Pari-mutuel betting game 
 
 # Steps to compile and deploy the smart contract 
 1. npm i (`node version 18`) 
