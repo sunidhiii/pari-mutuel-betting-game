@@ -1,7 +1,7 @@
 # pari-mutuel-betting-game
 pari-mutuel betting game 
 
-# Steps to compile and eploy the smart contract 
+# Steps to compile and deploy the smart contract 
 1. npm i (`node version 18`) 
 2. npm run compile ( to compile the contract)
 3. npm run `deploy:testnet` to deploy the smart contract on testnet. (currently using binance)
