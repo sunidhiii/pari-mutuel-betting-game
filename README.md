@@ -10,13 +10,20 @@ Pari-mutuel betting game
 ## Deployed smart contract on testnet: 
 https://testnet.bscscan.com/address/0x9e11d2164642da0f6f475813f0aeef1a0e5dc210 
 
-![alt text](image.png)
+## Place bets
 ![alt text](image-5.png)
 
+### `Withdraw rewards`
+![alt text](image.png)
+
 ## Admin Panel 
-![alt text](image-1.png)
+![alt text](image-1.png) 
+
+### Close and finalize round 
 ![alt text](image-4.png)
 
 ## Database game stats 
-![alt text](image-2.png)
+![alt text](image-2.png) 
+
+### User bets 
 ![alt text](image-3.png)
