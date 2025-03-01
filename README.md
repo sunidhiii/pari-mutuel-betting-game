@@ -1,5 +1,5 @@
 # pari-mutuel-betting-game
-pari-mutuel betting game 
+Pari-mutuel betting game 
 
 # Steps to start the project. 
 
