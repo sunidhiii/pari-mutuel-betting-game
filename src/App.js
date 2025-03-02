@@ -204,7 +204,7 @@ function App() {
                   <h2>Place a Bet</h2>
                   <input
                       type="number"
-                      placeholder="Enter amount (ETH)"
+                      placeholder="Enter amount (BNB)"
                       value={betAmount}
                       onChange={(e) => setBetAmount(e.target.value)} disabled={!gameState.isBettingOpen}
                   />
