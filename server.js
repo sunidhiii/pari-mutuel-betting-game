@@ -1,23 +1,12 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const { Web3 } = require("web3");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
 // Load environment variables
 const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI;
-// const ADMIN_PRIVATE_KEY = process.env.ADMIN_PRIVATE_KEY;
-// const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
-// const INFURA_API_URL = process.env.INFURA_API_URL;
-
-// Web3 setup
-// const web3 = new Web3(new Web3.providers.HttpProvider(INFURA_API_URL));
-// const contractABI = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"OwnableInvalidOwner","type":"error"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"OwnableUnauthorizedAccount","type":"error"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"round","type":"uint256"},{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":false,"internalType":"enum PariMutuelBetting.Outcome","name":"outcome","type":"uint8"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"BetPlaced","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"round","type":"uint256"}],"name":"BettingClosed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"round","type":"uint256"},{"indexed":false,"internalType":"enum PariMutuelBetting.Outcome","name":"winningOutcome","type":"uint8"}],"name":"OutcomeFinalized","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"round","type":"uint256"},{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Withdrawal","type":"event"},{"inputs":[],"name":"closeBetting","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"currentRound","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"enum PariMutuelBetting.Outcome","name":"_outcome","type":"uint8"}],"name":"finalizeOutcome","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"getContractBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"enum PariMutuelBetting.Outcome","name":"_outcome","type":"uint8"}],"name":"placeBet","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"rounds","outputs":[{"internalType":"bool","name":"isActive","type":"bool"},{"internalType":"bool","name":"isFinalized","type":"bool"},{"internalType":"enum PariMutuelBetting.Outcome","name":"winningOutcome","type":"uint8"},{"internalType":"uint256","name":"totalPool","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"startNewRound","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"roundId","type":"uint256"}],"name":"withdrawWinnings","outputs":[],"stateMutability":"nonpayable","type":"function"}];
-// const contract = new web3.eth.Contract(contractABI, CONTRACT_ADDRESS);
-// const adminAccount = web3.eth.accounts.privateKeyToAccount(ADMIN_PRIVATE_KEY);
-// web3.eth.accounts.wallet.add(adminAccount);
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
