@@ -196,7 +196,7 @@ function App() {
 
             <h2>Current Round: {currentRound}</h2>
             <h3>Betting Status: {gameState.isBettingOpen ? "Open" : "Closed"}</h3>
-            <h3>Winning Outcome: {gameState.finalized ? gameState.winningOutcome : "Not finalized"}</h3>
+            <h3>Winning Outcome: {gameState.finalized ? gameState.winningOutcome + 1 : "Not finalized"}</h3>
 
             {!isAdmin && (
               <div>
